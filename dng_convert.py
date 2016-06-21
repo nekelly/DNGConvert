@@ -21,7 +21,9 @@ dng_file_ext = "dng"
 db_path = 'C:\Noel\Photos\import.db'
 dng_converter = 'C:\\Program Files (x86)\\Adobe\\Adobe DNG Converter.exe'
 
+#########
 # Classes
+#########
 
 class Worker(Thread):
     """Thread executing tasks from a given tasks queue"""
