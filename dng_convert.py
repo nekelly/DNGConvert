@@ -98,9 +98,7 @@ def get_convert_lists(source_file_list):
 
         create_date = time.strftime("%Y-%m-%d", time.gmtime(os.stat(source_file_path)[9]))
         dng_file_name = source_file_path.replace(file_type, dng_file_ext)
-        #temp_raw_file_path = "%s\\%s\\%s" % (target_path, create_date, source_file)
         target_dng_file_path = "%s\\%s\\%s" % (target_path, create_date, dng_file_name)
-        #date_path = target_path + "\\" + create_date
 
         row = (target_dng_file_path,)
         global cur
@@ -125,16 +123,13 @@ def get_target_convert_list(source_file_list):
 
         create_date = time.strftime("%Y-%m-%d", time.gmtime(os.stat(source_file_path)[9]))
         dng_file_name = source_file_path.replace(file_type, dng_file_ext)
-        #temp_raw_file_path = "%s\\%s\\%s" % (target_path, create_date, source_file)
         target_dng_file_path = "%s\\%s\\%s" % (target_path, create_date, dng_file_name)
-        #date_path = target_path + "\\" + create_date
 
 
 def get_file_dates(source_file_list):
 
     date_list = []
     for file_path in source_file_list:
-        #file_name = file_path.split("\\")[-1]
         create_date = time.strftime("%Y-%m-%d", time.gmtime(os.stat(file_path)[9]))
         if create_date not in date_list:
             date_list.append(create_date)
